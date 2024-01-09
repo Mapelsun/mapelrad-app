@@ -9,7 +9,11 @@ const mapleColors = {
   // Background
   // Accent
   'accent-green': '#AEF378',
-  'accent-blue': '#476EF9'
+  'accent-blue': '#476EF9',
+  'accent-gray-100': '#F9FAFB',
+  'accent-gray-200': '#EFF1F3',
+  'accent-gray-300': '#E5E7EB',
+  'accent-gray-400': '#D1D5DB',
 }
 
 export default {
@@ -19,10 +23,13 @@ export default {
   ],
   theme: {
     extend: {
-      colors: {...mapleColors}
+      colors: {...mapleColors},
     },
       backgroundImage: {
         'auth': "url('@/assets/images/Pattern.png')",
+      },
+      width: {
+        '126': '31.5rem',
       }
   },
   plugins: [],
