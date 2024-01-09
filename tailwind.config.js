@@ -17,24 +17,21 @@ const mapleColors = {
 }
 
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{vue,js,ts,jsx,tsx}",
-  ],
+  content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
   theme: {
     extend: {
-      colors: {...mapleColors},
-    },
+      colors: { ...mapleColors },
       backgroundImage: {
-        'auth': "url('@/assets/images/Pattern.png')",
+        auth: "url('@/assets/images/Pattern.png')",
       },
       width: {
-        '13': '3.375rem',
-        '126': '31.5rem',
+        13: '3.375rem',
+        126: '31.5rem',
       },
       height: {
-        '13': '3.375rem',
-      }
+        13: '3.375rem',
+      },
+    },
   },
   plugins: [],
 }
