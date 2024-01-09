@@ -38,10 +38,10 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="flex justify-between gap-2">
+  <div class="flex justify-between gap-1 sm:gap-2">
     <input v-for="(digit, index) in otpDigits" :key="index" v-model="otpDigits[index]" type="text" maxlength="1"
       @input="handleInput(index)" @keydown.delete="handleDelete(index)" ref="digitInputRefs" :refInFor="true"
-      class="rounded bg-accent-gray-100 w-13 h-13 text-center" />
+      class="rounded bg-accent-gray-100 w-10 h-13 sm:w-13 sm:h-13 text-center" />
   </div>
 </template>
 
