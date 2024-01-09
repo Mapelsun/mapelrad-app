@@ -29,7 +29,11 @@ export default {
         'auth': "url('@/assets/images/Pattern.png')",
       },
       width: {
+        '13': '3.375rem',
         '126': '31.5rem',
+      },
+      height: {
+        '13': '3.375rem',
       }
   },
   plugins: [],

@@ -9,6 +9,11 @@ const router = createRouter({
       name: 'home',
       component: LoginView
     },
+    {
+      path: '/otp-verification',
+      name: 'verify',
+      component: () => import('../views/OtpView.vue')
+    }
   ]
 })
 
