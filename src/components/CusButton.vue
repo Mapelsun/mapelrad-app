@@ -28,6 +28,7 @@ const computedClasses = computed(() => {
     'rounded-[10px] font-semibold text-primary py-2',
     props.customClasses,
     getVariantClass(),
+    { 'cursor-not-allowed opacity-50': props.disabled }
   ];
 })
 
