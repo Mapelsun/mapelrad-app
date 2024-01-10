@@ -6,13 +6,27 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      name: 'home',
-      component: LoginView
+      name: 'Login',
+      component: LoginView,
+      meta: {
+        title: 'Maplerad - Home'
+      }
     },
     {
       path: '/otp-verification',
       name: 'verify',
-      component: () => import('../views/OtpView.vue')
+      component: () => import('../views/OtpView.vue'),
+      meta: {
+        title: 'Maplerad - Otp Verification'
+      }
+    },
+    {
+      path: '/dashboard',
+      name: 'home',
+      component: () => import('../views/DashboardView.vue'),
+      meta: {
+        title: 'Maplerad - Home'
+      }
     }
   ]
 })
