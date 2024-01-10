@@ -15,6 +15,9 @@ const mapleColors = {
   'accent-gray-300': '#E5E7EB',
   'accent-gray-400': '#D1D5DB',
   'accent-gray-500': '#6B7280',
+  'accent-gray-600': '#BFBFBF',
+  'accent-gray-700': '#9CA3AF',
+  'accent-gray-800': '#374151',
 }
 
 export default {
@@ -28,11 +31,16 @@ export default {
       width: {
         13: '3.375rem',
         50: '12.5rem',
+        108: '26.813rem',
         126: '31.5rem',
       },
       height: {
         13: '3.375rem',
       },
+      fontSize: {
+        '2.5xl': '2rem',
+        '4.5xl': '2.5rem',
+      }
     },
   },
   plugins: [],
