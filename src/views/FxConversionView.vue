@@ -1,10 +1,6 @@
 <script setup>
-import { ref } from 'vue';
 import DashboardLayout from '@/layouts/DashboardLayout.vue'
 import CusButton from '@/components/CusButton.vue'
-
-const currentStep = ref(0)
-const labels = ref(['A'])
 </script>
 
 <template>
@@ -63,7 +59,7 @@ const labels = ref(['A'])
               <img src="@/assets/icons/arrow-downward.svg" alt="">
             </div>
           </div>
-          <cus-button @click="test" variant="green-bg">Convert</cus-button>
+          <cus-button variant="green-bg">Convert</cus-button>
         </div>
       </div>
 
