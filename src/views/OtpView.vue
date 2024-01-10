@@ -1,9 +1,12 @@
 <script setup>
 import { ref } from 'vue'
+import { useRouter } from 'vue-router'
 import AuthLayout from '@/layouts/AuthLayout.vue'
 import AuthCard from '@/components/AuthCard.vue'
 import CusButton from '@/components/CusButton.vue'
 import OtpInput from '@/components/OtpInput.vue'
+
+const router = useRouter()
 
 const otpVal = ref('')
 
@@ -35,7 +38,7 @@ const test = () => {
             Didn’t receive any code?
             <span class="text-accent-blue cursor-pointer">Resend</span>
           </p>
-          <cus-button @click="test" variant="gray-bg" custom-classes="flexCenter gap-2"><img
+          <cus-button @click="router.back()" variant="gray-bg" custom-classes="flexCenter gap-2"><img
               src="@/assets/icons/arrow-back.svg" alt="" /><span>Go back to login</span></cus-button>
         </div>
       </template>
