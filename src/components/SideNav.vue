@@ -1,4 +1,9 @@
-<script setup></script>
+<script setup>
+import { ref } from 'vue';
+import SwitchToggle from '@/components/SwitchToggle.vue'
+
+const isEnabled = ref(true)
+</script>
 
 <template>
   <div class="flex flex-col w-50">
@@ -30,10 +35,11 @@
       </router-link>
     </div>
     <div class="singleNav mt-[30vh]">
-      <router-link to="" class="bg-accent-gray-200 rounded-[10px] p-4 justify-between">
+      <div to=""
+        class="flex items-center gap-3 mb-6 cursor-pointer bg-accent-gray-200 rounded-[10px] p-4 justify-between">
         <span>Sandbox mode</span>
-        <img src="@/assets/images/switch.svg" alt="" />
-      </router-link>
+        <switch-toggle v-model="isEnabled" />
+      </div>
       <router-link to="">
         <img src="@/assets/icons/plus.svg" alt="" />
         <span>Invite people</span>
