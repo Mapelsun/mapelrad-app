@@ -14,6 +14,7 @@ const mapleColors = {
   'accent-gray-200': '#EFF1F3',
   'accent-gray-300': '#E5E7EB',
   'accent-gray-400': '#D1D5DB',
+  'accent-gray-500': '#6B7280',
 }
 
 export default {
@@ -26,6 +27,7 @@ export default {
       },
       width: {
         13: '3.375rem',
+        50: '12.5rem',
         126: '31.5rem',
       },
       height: {

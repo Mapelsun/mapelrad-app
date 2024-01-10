@@ -14,9 +14,24 @@ body {
 }
 
 @layer utilities {
+  .max-container {
+    @apply mx-auto max-w-[1440px] w-full py-3 px-3
+  }
+
+  .padding-container {
+    @apply px-6 lg:px-20 3xl:px-0;
+  }
+
+  .singleNav {
+    @apply flex flex-col [&_a]:flexMiddle [&_a]:gap-3 [&_a]:mb-6 [&_a]:cursor-pointer [&_span]:font-medium [&_span]:text-sm;
+  }
   /* Flex */
   .flexCenter {
     @apply flex items-center justify-center;
+  }
+
+  .flexMiddle {
+    @apply flex items-center;
   }
 
   .flexBetween {
