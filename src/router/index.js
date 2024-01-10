@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import LoginView from '../views/LoginView.vue'
+import { useGlobalStore } from '@/stores/global'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -29,6 +30,7 @@ const router = createRouter({
           component: () => import('../views/DashboardView.vue'),
           meta: {
             title: 'Maplerad - Home',
+            requiresAuth: true,
           },
         },
         {
@@ -37,6 +39,7 @@ const router = createRouter({
           component: () => import('../views/FxConversionView.vue'),
           meta: {
             title: 'Maplerad - FX Conversion',
+            requiresAuth: true,
           },
         },
         {
@@ -45,6 +48,7 @@ const router = createRouter({
           component: () => import('../views/DashboardView.vue'),
           meta: {
             title: 'Maplerad - Get Started',
+            requiresAuth: true,
           },
         },
         {
@@ -53,6 +57,7 @@ const router = createRouter({
           component: () => import('../views/DashboardView.vue'),
           meta: {
             title: 'Maplerad - Cash',
+            requiresAuth: true,
           },
         },
         {
@@ -61,6 +66,7 @@ const router = createRouter({
           component: () => import('../views/DashboardView.vue'),
           meta: {
             title: 'Maplerad - Card',
+            requiresAuth: true,
           },
         },
         {
@@ -69,6 +75,7 @@ const router = createRouter({
           component: () => import('../views/DashboardView.vue'),
           meta: {
             title: 'Maplerad - Customers',
+            requiresAuth: true,
           },
         },
         {
@@ -77,11 +84,25 @@ const router = createRouter({
           component: () => import('../views/DashboardView.vue'),
           meta: {
             title: 'Maplerad - Invite People',
+            requiresAuth: true,
           },
         },
       ],
     },
   ],
+})
+
+router.beforeEach((to, from, next) => {
+  if (to.matched.some((route) => route.meta.requiresAuth)) {
+    const global = useGlobalStore()
+    if (global.authUser) {
+      next()
+    } else {
+      next('/')
+    }
+  } else {
+    next()
+  }
 })
 
 export default router
