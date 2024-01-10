@@ -25,6 +25,7 @@ body {
   .singleNav {
     @apply flex flex-col [&_a]:flexMiddle [&_a]:gap-3 [&_a]:mb-6 [&_a]:cursor-pointer [&_span]:font-medium [&_span]:text-sm;
   }
+
   /* Flex */
   .flexCenter {
     @apply flex items-center justify-center;
@@ -65,4 +66,9 @@ body {
 .hide-scrollbar {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
+}
+
+/* Active Router Link */
+.router-link-exact-active {
+  @apply bg-accent-gray-200 rounded-[10px] p-2;
 }
