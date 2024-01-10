@@ -7,7 +7,7 @@ import SideNav from '@/components/SideNav.vue'
   <div class="flex flex-col">
     <header-nav />
     <hr class="w-full text-accent-gray-200" />
-    <div class="max-container flex my-4 h-[90vh]">
+    <div class="max-container flex gap-8 my-4 h-[90vh]">
       <side-nav />
       <slot />
     </div>

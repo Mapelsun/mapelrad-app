@@ -33,7 +33,7 @@ const test = () => {
           <div class="flex flex-col mb-6">
             <otp-input @otp-complete="(otp) => otpVal = otp" />
           </div>
-          <cus-button @click="test" variant="green-bg">Submit</cus-button>
+          <cus-button @click="test" variant="green-bg" custom-classes="mb-4">Submit</cus-button>
           <p class="text-secondary text-sm text-center mb-8">
             Didn’t receive any code?
             <span class="text-accent-blue cursor-pointer">Resend</span>

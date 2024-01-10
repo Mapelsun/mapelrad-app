@@ -25,7 +25,7 @@ const props = defineProps({
 
 const computedClasses = computed(() => {
   return [
-    'rounded-[10px] font-semibold text-primary w-full py-2',
+    'rounded-[10px] font-semibold text-primary py-2',
     props.customClasses,
     getVariantClass(),
   ];
