@@ -9,6 +9,8 @@ const mapleColors = {
   // Background
   // Accent
   'accent-green': '#AEF378',
+  'accent-green-200': '#EDF7F1',
+  'accent-green-700': '#25A254',
   'accent-blue': '#476EF9',
   'accent-gray-100': '#F9FAFB',
   'accent-gray-200': '#EFF1F3',

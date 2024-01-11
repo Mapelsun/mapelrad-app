@@ -55,6 +55,10 @@ body {
   .black-32 {
     @apply text-[32px] leading-[120%] font-[900] text-center;
   }
+
+  .subHeader {
+    @apply font-semibold text-2xl;
+  }
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
@@ -71,4 +75,9 @@ body {
 /* Active Router Link */
 .router-link-exact-active {
   @apply bg-accent-gray-200 rounded-[10px] p-2;
+}
+
+/* Apexchart Tooltip */
+.arrow_box {
+  @apply text-white text-sm bg-[#1B2130] p-1;
 }
