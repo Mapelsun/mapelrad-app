@@ -1,9 +1,19 @@
 <script setup>
 import { ref, computed } from 'vue'
+import { useRouter } from 'vue-router'
 import { useGlobalStore } from '@/stores/global'
-const global = useGlobalStore()
 
-const fullName = computed(() => `${global.authUser.first_name} ${global.authUser.last_name}`)
+const global = useGlobalStore()
+const router = useRouter()
+
+const fullName = computed(() => `${global.authUser?.first_name} ${global.authUser?.last_name}`)
+
+const handleLogout = () => {
+  global.setUser(null)
+  global.setAuthUser(null)
+  localStorage.removeItem('piniaState')
+  router.push('/')
+}
 
 </script>
 
@@ -23,7 +33,8 @@ const fullName = computed(() => `${global.authUser.first_name} ${global.authUser
           <span class="font-semibold text-sm">{{ fullName || 'John Doe' }}</span>
           <span class="font-medium text-xs text-accent-gray-500">Maplerad Technologies</span>
         </div>
-        <img src="@/assets/icons/arrow-downward.svg" alt="" class="cursor-pointer" />
+        <img src="@/assets/icons/arrow-downward.svg" alt="" class="cursor-pointer" @click="handleLogout"
+          title="Sign out" />
       </div>
     </div>
   </div>
