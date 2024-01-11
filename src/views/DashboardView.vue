@@ -4,6 +4,8 @@ import DashboardLayout from '@/layouts/DashboardLayout.vue'
 import CusButton from '@/components/CusButton.vue'
 import ProgressBar from '@/components/ProgressBar.vue'
 import OverviewChart from '@/components/OverviewChart.vue'
+import OverviewSummary from '@/components/OverviewSummary.vue'
+import ReportsSummary from '@/components/ReportsSummary.vue'
 
 const currentStep = ref(1)
 </script>
@@ -29,12 +31,7 @@ const currentStep = ref(1)
             days</span><img src="@/assets/icons/arrow-downward-gray.svg" alt="" /></div>
         <div class="flex gap-4 overflow-x-scroll">
           <overview-chart />
-          <div class="flex flex-col border-t border-t-accent-gray-200 pt-4 w-[20%]">
-            <div class="flex flex-col h-[50%]"><span class="text-sm text-accent-gray-500 font-medium">Revenue</span><span
-                class="text-2xl font-medium">$0.00</span></div>
-            <div class="flex flex-col"><span class="text-sm text-accent-gray-500 font-medium">Spend per
-                customer</span><span class="text-2xl font-medium">$0.00</span></div>
-          </div>
+          <overview-summary />
         </div>
       </div>
 
@@ -50,66 +47,10 @@ const currentStep = ref(1)
           </div>
         </div>
         <div class="grid grid-cols-4 gap-4">
-          <div class="border-t border-t-accent-gray-200 pt-4">
-            <div class="mb-4">
-              <div class="flexBetween"><span class="text-sm text-accent-gray-500 font-medium">Revenue</span>
-                <div
-                  class="rounded-[10px] flexMiddle gap-1 p-1 cursor-pointer bg-accent-green-200 text-xs text-accent-green-700">
-                  <img src="@/assets/icons/circle-up-green.svg" alt=""><span>2%</span>
-                </div>
-              </div>
-              <span class="text-2xl font-medium">$350.00</span>
-            </div>
-            <div class="mb-4">
-              <img src="@/assets/images/graph.png" alt="">
-            </div>
-            <div class="text-accent-gray-700 text-xs flex justify-between"><span>July 6</span><span>Today</span></div>
-          </div>
-          <div class="border-t border-t-accent-gray-200 pt-4">
-            <div class="mb-4">
-              <div class="flexBetween"><span class="text-sm text-accent-gray-500 font-medium">Revenue</span>
-                <div
-                  class="rounded-[10px] flexMiddle gap-1 p-1 cursor-pointer bg-accent-green-200 text-xs text-accent-green-700">
-                  <img src="@/assets/icons/circle-up-green.svg" alt=""><span>2%</span>
-                </div>
-              </div>
-              <span class="text-2xl font-medium">$350.00</span>
-            </div>
-            <div class="mb-4">
-              <img src="@/assets/images/graph.png" alt="">
-            </div>
-            <div class="text-accent-gray-700 text-xs flex justify-between"><span>July 6</span><span>Today</span></div>
-          </div>
-          <div class="border-t border-t-accent-gray-200 pt-4">
-            <div class="mb-4">
-              <div class="flexBetween"><span class="text-sm text-accent-gray-500 font-medium">Revenue</span>
-                <div
-                  class="rounded-[10px] flexMiddle gap-1 p-1 cursor-pointer bg-accent-green-200 text-xs text-accent-green-700">
-                  <img src="@/assets/icons/circle-up-green.svg" alt=""><span>2%</span>
-                </div>
-              </div>
-              <span class="text-2xl font-medium">$350.00</span>
-            </div>
-            <div class="mb-4">
-              <img src="@/assets/images/graph.png" alt="">
-            </div>
-            <div class="text-accent-gray-700 text-xs flex justify-between"><span>July 6</span><span>Today</span></div>
-          </div>
-          <div class="border-t border-t-accent-gray-200 pt-4">
-            <div class="mb-4">
-              <div class="flexBetween"><span class="text-sm text-accent-gray-500 font-medium">Revenue</span>
-                <div
-                  class="rounded-[10px] flexMiddle gap-1 p-1 cursor-pointer bg-accent-green-200 text-xs text-accent-green-700">
-                  <img src="@/assets/icons/circle-up-green.svg" alt=""><span>2%</span>
-                </div>
-              </div>
-              <span class="text-2xl font-medium">$350.00</span>
-            </div>
-            <div class="mb-4">
-              <img src="@/assets/images/graph.png" alt="">
-            </div>
-            <div class="text-accent-gray-700 text-xs flex justify-between"><span>July 6</span><span>Today</span></div>
-          </div>
+          <reports-summary />
+          <reports-summary />
+          <reports-summary />
+          <reports-summary />
         </div>
       </div>
     </div>
