@@ -12,10 +12,12 @@ const router = useRouter()
 
 const email = ref('')
 const password = ref('')
+const isLoading = ref(false)
 
 const submitForm = async () => {
   const payload = { email: email.value, password: password.value }
   try {
+    isLoading.value = true
     const response = await apiServices.loginUser(payload)
     if (response.status && response.message === 'OTP Sent') {
       global.setUser(payload)
@@ -23,6 +25,8 @@ const submitForm = async () => {
     }
   } catch (error) {
     console.log(error)
+  } finally {
+    isLoading.value = false
   }
 }
 </script>
@@ -47,7 +51,8 @@ const submitForm = async () => {
               <input type="password" v-model="password" placeholder="(8+ characters)"
                 class="bg-accent-gray-100 py-3 px-4 rounded-[10px] font-normal text-base">
             </div>
-            <cus-button type="submit" variant="green-bg" :disabled="!email || !password">Sign in</cus-button>
+            <cus-button type="submit" variant="green-bg" :disabled="!email || !password" :loading="isLoading">Sign
+              in</cus-button>
           </form>
           <p class="text-secondary text-sm text-center cursor-pointer mb-8">Forgot your password?</p>
           <cus-button variant="gray-bg">Don’t have an account? Create one</cus-button>

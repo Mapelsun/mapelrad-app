@@ -12,12 +12,14 @@ const global = useGlobalStore()
 const router = useRouter()
 
 const otpVal = ref('')
+const isLoading = ref(false)
 
 const handleOtpVerification = async () => {
   const { email } = global.user
   const payload = { email, otp: otpVal.value }
 
   try {
+    isLoading.value = true
     const response = await apiServices.verifyOtp(payload)
     if (response.status && response.message === 'Login successful') {
       global.setAuthUser(response.data)
@@ -26,6 +28,8 @@ const handleOtpVerification = async () => {
     }
   } catch (error) {
     console.log(error)
+  } finally {
+    isLoading.value = false
   }
 }
 </script>
@@ -47,8 +51,8 @@ const handleOtpVerification = async () => {
           <div class="flex flex-col mb-6">
             <otp-input @otp-complete="(otp) => otpVal = otp" />
           </div>
-          <cus-button @click="handleOtpVerification" variant="green-bg" custom-classes="mb-4"
-            :disabled="!otpVal">Submit</cus-button>
+          <cus-button @click="handleOtpVerification" variant="green-bg" custom-classes="mb-4" :disabled="!otpVal"
+            :loading="isLoading">Submit</cus-button>
           <p class="text-secondary text-sm text-center mb-8">
             Didn’t receive any code?
             <span class="text-accent-blue cursor-pointer">Resend</span>

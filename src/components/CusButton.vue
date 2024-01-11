@@ -1,11 +1,17 @@
 <script setup>
 import { computed } from 'vue'
+import Spinner from '@/components/Spinner.vue'
+
 const props = defineProps({
   type: {
     type: String,
     default: 'button',
   },
   disabled: {
+    type: Boolean,
+    default: false,
+  },
+  loading: {
     type: Boolean,
     default: false,
   },
@@ -52,7 +58,10 @@ const handleClick = () => {
 
 <template>
   <button :class="computedClasses" :type="type" :disabled="disabled" @click="handleClick">
-    <slot></slot>
+    <Spinner v-if="loading" :isLoading="loading" />
+    <div v-else class="flexCenter gap-2">
+      <slot></slot>
+    </div>
   </button>
 </template>
 
