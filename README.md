@@ -28,8 +28,8 @@ This is a solution to the [Maplerad app](https://tinyurl.com/5n87a5t9) interface
 - Integrate APIs:
   - Head over to [maplerad sandbox environment](https://sandbox.maplerad.com), inspect the API calls being made from the frontend to determine the endpoints to use and replicate them accordingly.
 - UI Replication:
-- Create a user interface that closely resembles the screens from the provided Figma links.
-- Pay attention to layout, fonts, colors, icons, and spacing to achieve a visually similar result.
+  - Create a user interface that closely resembles the screens from the provided Figma links.
+  - Pay attention to layout, fonts, colors, icons, and spacing to achieve a visually similar result.
 - Link Navigation:
   - Implement basic navigation between the screens.
   - Create a menu or navigation bar that allows the user to switch between the replicated screens.
