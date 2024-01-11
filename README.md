@@ -1,7 +1,72 @@
-# Vue 3 + Vite
+# Maplerad app - Solution built using vite, vue3, tailwindcss and pinia
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+This is a solution to the [Maplerad app](https://tinyurl.com/5n87a5t9) interface.
 
-## Recommended IDE Setup
+## Table of contents
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+- [Overview](#overview)
+  - [Requirements](#requirements)
+  - [How to run the app](#how-to-run-the-app)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [Note](#note)
+  - [Continued development](#continued-development)
+- [Author](#author)
+
+## Overview
+
+### Requirements
+
+- Vue.js Project Setup:
+  - Set up a new Vue.js project using Vue CLI or your preferred project setup method.
+- Figma Screens: Here are the Figma screens that you need to replicate:
+  - Login Screen
+  - OTP Screen
+  - Dashboard Home Screen
+  - FX Screen
+- Integrate APIs:
+  - Head over to [maplerad sandbox environment](https://sandbox.maplerad.com), inspect the API calls being made from the frontend to determine the endpoints to use and replicate them accordingly.
+- UI Replication:
+- Create a user interface that closely resembles the screens from the provided Figma links.
+- Pay attention to layout, fonts, colors, icons, and spacing to achieve a visually similar result.
+- Link Navigation:
+  - Implement basic navigation between the screens.
+  - Create a menu or navigation bar that allows the user to switch between the replicated screens.
+- Documentation:
+- Provide clear and concise instructions on how to run your Vue.js application.
+
+### How to run the app
+
+- Clone the repository using the Solution URL provided below.
+- Open cloned project in your desired IDE and run `npm install` in the terminal to install project dependencies.
+- Run `npm run dev` in the terminal to start the project in development mode
+- Visit the Local link provided in the terminal, similar to this - `http://localhost:5173/`, if the port is not used by other app.
+- You can also visit the Live Site URL provided below to view the deployed app.
+
+### Links
+
+- Solution URL: [Add solution URL here](https://github.com/Mapelsun/mapelrad-app)
+- Live Site URL: [Add live site URL here](https://netlify.app/)
+
+## My process
+
+### Built with
+
+- [Vite](https://vitejs.dev/) - Bundler
+- [Vue3](https://vuejs.org/) - JS framework
+- [Pinia](https://pinia.vuejs.org/) - Store
+- [TailwindCSS](https://tailwindcss.com/) - For styles
+- [ApexCharts](https://apexcharts.com/) - For dashboard charts
+
+### Note
+
+**To sign out of the app**, click on the down arrow beside the user displayed avatar and full name on the dashboard header. The card wasn't implemented because it's not present in the figma interface.
+
+### Continued development
+
+Possible refactor at a later date and making the dashboard responsive.
+
+## Author
+
+- Website - [Pelumi Majolagbe](https://pelumi.dev/)
