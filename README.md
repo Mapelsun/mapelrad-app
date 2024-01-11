@@ -46,8 +46,8 @@ This is a solution to the [Maplerad app](https://tinyurl.com/5n87a5t9) interface
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/Mapelsun/mapelrad-app)
-- Live Site URL: [Add live site URL here](https://celebrated-lily-95564a.netlify.app/)
+- [Solution URL:](https://github.com/Mapelsun/mapelrad-app)
+- [Live Site URL:](https://celebrated-lily-95564a.netlify.app/)
 
 ## My process
 
